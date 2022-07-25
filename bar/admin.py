@@ -10,4 +10,4 @@ admin.site.register(Reservation)
 @admin.register(Menu)
 class MenuAdmin(SummernoteModelAdmin):
 
-    summernote_fields = ('Menu')
+    summernote_fields = ('food_details')

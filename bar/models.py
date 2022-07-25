@@ -25,3 +25,4 @@ class Menu(models.Model):
     meat = models.CharField(max_length=30)
     allergy = models.CharField(max_length=30)
     food_details = models.CharField(max_length=150)
+    price = models.DecimalField(max_digits=5, decimal_places=2, default=149)
