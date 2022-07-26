@@ -5,6 +5,9 @@ from cloudinary.models import CloudinaryField
 
 class Restaurant(models.Model):
     name = models.CharField(max_length=120)
+    address = models.CharField(max_length=120, default='Kings Place')
+    city = models.CharField(max_length=120, default='Kristiansund')
+    country = models.CharField(max_length=120, default='Norway')
 
 class Customer(models.Model):
     email = models.EmailField()

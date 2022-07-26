@@ -2,6 +2,9 @@ from django.contrib import admin
 from .models import Restaurant, Customer, Table, Reservation, Menu
 from django_summernote.admin import SummernoteModelAdmin
 
+@admin.register(Restaurant)
+class RestaurantAdmin(admin.ModelAdmin):
+    list_display = ('name', 'address', 'city', 'country')
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
