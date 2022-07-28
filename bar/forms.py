@@ -4,4 +4,4 @@ from django import forms
 
 class ReservationForm(forms.ModelForm):
     model = Reservation
-    fields = ('table', 'party', 'spot',)
+    fields = ('__all__')
