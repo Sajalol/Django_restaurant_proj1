@@ -3,5 +3,7 @@ from django import forms
 
 
 class ReservationForm(forms.ModelForm):
-    model = Reservation
-    fields = ('__all__')
+
+    class Meta:
+        model = Reservation
+        fields = ('table', 'party', 'spot',)

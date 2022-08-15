@@ -1,15 +1,27 @@
 {% extends "base.html" %}
-
 {% block content %}
-
 {% load crispy_forms_tags %}
 
 <div class="container-fluid">
     <div class="row">
+        <h2>
+            {% if user.is_authenticated %}
+            <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+        {% else %}
+            <p>Welcome, new user. Please log in.</p>
+        {% endif %}</h2>
 
-        <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
+                <h4>Welcome to our reservations page. Please select how many seats you'd like</h4>
+                {% if user.is_authenticated %}
+
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ ReservationForm | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-drk">Submit</button>               
+                </form>
+                {% endif %}
 
             </div>
         </div>
