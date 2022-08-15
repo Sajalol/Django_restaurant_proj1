@@ -11,9 +11,10 @@
             <p>Welcome, new user. Please log in.</p>
         {% endif %}</h2>
 
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                <h4>Welcome to our reservations page. Please select how many seats you'd like</h4>
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+                <h3>Welcome to our reservations page</h3>
+                <h5>Please select how many seats you'd like</h5>
                 {% if user.is_authenticated %}
 
                 <form method="post" style="margin-top: 1.3em;">
