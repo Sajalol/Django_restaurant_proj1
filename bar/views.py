@@ -15,14 +15,19 @@ class ReservationList(generic.ListView):
     model = Reservation
     template_name = 'reservation.html'
 
-def reservations(request):
-    if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        comment = request.POST.get('comment')
+    def reservation(self, request):
+        reservation_form = ReservationForm(data=request.POST)
+        if request.method == "POST":
+            Table = request.POST.get('Table')
+            Costumer = request.POST.get('Customer')
+            spot = request.POST.get('spot')
 
-        reservations = Table(name=name, email=email, comment=comment)
-
-        reservations.save()
-
-    return render(request, 'reservation.html')
+            return render(
+                request,
+                "reservation.html",
+                {
+                    "Table": table,
+                    "Costumer": costumer,
+                    "spot": spot,
+                }
+            )

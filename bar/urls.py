@@ -1,5 +1,6 @@
 from . import views
-from django.urls import path
+from django.urls import path,include
+from bar import views
 
 urlpatterns = [
     path('', views.RestaurantList.as_view(), name='home'),

@@ -18,7 +18,7 @@
                 {% if user.is_authenticated %}
 
                 <form method="post" style="margin-top: 1.3em;">
-                    {{ ReservationForm | crispy }}
+                    {{ reservation_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-drk">Submit</button>               
                 </form>
