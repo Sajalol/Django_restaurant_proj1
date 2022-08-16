@@ -26,8 +26,8 @@ class ReservationList(generic.ListView):
                 request,
                 "reservation.html",
                 {
-                    "Table": table,
-                    "Costumer": costumer,
+                    "table": Table,
+                    "party": Costumer,
                     "spot": spot,
                 }
             )
