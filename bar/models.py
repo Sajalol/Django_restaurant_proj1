@@ -28,11 +28,12 @@ class Table(models.Model):
 
 class Reservation(models.Model):
     name = models.CharField(max_length=50, default="",)
-    email = models.EmailField(default='EnterEmail@Email.com',)
+    email = models.EmailField(default="",)
     phone = models.IntegerField(default=12345678,)
-    number_of_person = models.IntegerField(default=3,)
-    spot = models.DateField()
+    number_of_guests = models.IntegerField(default=3,)
+    date = models.DateField()
     time = models.TimeField(default='00:00',)
+    approved = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = 'reservation'

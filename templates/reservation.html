@@ -10,9 +10,13 @@
         <div class="container">
             <div class="row align-items-center justify-content-center">
             <div class="col-md-7" data-aos="fade-up">
-                <h2 class="heading">Reservation</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe dolorum dolorem, iste officia voluptates! Sint repudiandae, soluta voluptatem delectus iure, eaque, harum expedita, nisi aliquam magni odio perferendis ipsum!</p>
-            </div>
+                <h2 class="heading">
+                    {% if user.is_authenticated %}
+                    Welcome, {{ user.username }}. And thanks for logging in.
+                {% else %}
+                    Welcome, new user. Please log in.
+                {% endif %}</h2>
+                </div>
             </div>
         </div>
         </div>
@@ -20,10 +24,10 @@
 
     <div class="section" data-aos="fade-up">
         <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-8  text-center">
-            <h2 class="mb-3">Reservation</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias distinctio voluptatum magni voluptatibus.</p>
+        <div class="row justify-content-center mb-2">
+            <div class="col-md-5  text-center">
+            <h3 class="mb-2">Welcome to our reservations page</h3>
+            <hp class="lead">Please fill out the reservation form and write the name you'd like to reserve the table on.</h4>
             </div>
         </div>
         <div class="row justify-content-center">

@@ -16,8 +16,8 @@ class TableAdmin(admin.ModelAdmin):
 
 @admin.register(Reservation)
 class ReservationAdmin(admin.ModelAdmin):
-    list_filter = ('name', 'email', 'phone', 'number_of_person', 'spot', 'time',)
-    list_display = ('name', 'email', 'phone', 'number_of_person', 'spot', 'time',)
+    list_filter = ('name', 'email', 'phone', 'number_of_guests', 'date', 'time', 'approved')
+    list_display = ('name', 'email', 'phone', 'number_of_guests', 'date', 'time', 'approved')
     actions = ['approve_Reservation']
 
     def approve_Reservation(self, request, queryset):
