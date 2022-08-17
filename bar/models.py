@@ -27,10 +27,19 @@ class Table(models.Model):
 
 
 class Reservation(models.Model):
-    table = models.ForeignKey('Table', on_delete=models.CASCADE)
-    party = models.ForeignKey('Customer', on_delete=models.CASCADE)
+    name = models.CharField(max_length=50, default="",)
+    email = models.EmailField(default='EnterEmail@Email.com',)
+    phone = models.IntegerField(default=12345678,)
+    number_of_person = models.IntegerField(default=3,)
     spot = models.DateField()
-    approved = models.BooleanField(default=False)
+    time = models.TimeField(default='00:00',)
+
+    class Meta:
+        verbose_name = 'reservation'
+        verbose_name_plural = 'reservations'
+
+    def __str__(self) -> str:
+        return self.name
 
 class Menu(models.Model):
     nameOfFood = models.CharField(max_length=30)

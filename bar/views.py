@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Restaurant, Menu, Reservation, Customer, Table
-from .forms import ReservationForm
+from .forms import ReserveTableForm
 
 class RestaurantList(generic.ListView):
     model = Restaurant
@@ -11,23 +11,16 @@ class MenuList(generic.ListView):
     model = Menu
     template_name = 'menu.html'
 
-class ReservationList(generic.ListView):
-    model = Reservation
-    template_name = 'reservation.html'
 
-    def reservation(self, request):
-        reservation_form = ReservationForm(data=request.POST)
-        if request.method == "POST":
-            Table = request.POST.get('Table')
-            Costumer = request.POST.get('Customer')
-            spot = request.POST.get('spot')
+def reserve_table(request):
+    reserve_form = ReserveTableForm()
 
-            return render(
-                request,
-                "reservation.html",
-                {
-                    "table": Table,
-                    "party": Costumer,
-                    "spot": spot,
-                }
-            )
+    if request.method == 'POST':
+        reserve_form = ReserveTableForm(request.POST)
+
+        if reserve_form.is_valid():
+            reserve_form.save()
+
+    context = {'form': reserve_form}
+
+    return render(request, 'reservation.html', context)
