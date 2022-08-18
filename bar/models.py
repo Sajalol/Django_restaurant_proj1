@@ -1,6 +1,8 @@
 from django.db import models
+import datetime
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+
 
 
 class Restaurant(models.Model):
@@ -31,7 +33,7 @@ class Reservation(models.Model):
     email = models.EmailField(default="",)
     phone = models.IntegerField(default=12345678,)
     number_of_guests = models.IntegerField(default=3,)
-    date = models.DateField()
+    date = models.DateField(default=datetime.date.today)
     time = models.TimeField(default='00:00',)
     approved = models.BooleanField(default=False)
 

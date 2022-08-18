@@ -63,6 +63,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
+DATE_INPUT_FORMATS = ['%d/%m/%Y']
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
