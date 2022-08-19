@@ -1,3 +1,19 @@
+body,html {
+    height: 100%;
+}
+
+#bg {
+    /* image used */ 
+    background: url("/static/img/background.jpg");
+
+    height:100%;
+
+    background-position:absolute;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
 body {
     background-color: #F9FAFC;
 }
@@ -155,3 +171,13 @@ body {
 .heading {
     padding-top: 2.5%;
 }
+
+
+i {
+    color: #9e6459;
+}
+
+i:hover,
+i:active {
+    background-color: #343434;
+    color: #9e6459; }
