@@ -1,6 +1,10 @@
 {% extends "base.html" %}
+{% load bootstrap4 %}
 
 {% block content %}
+<!------  Background    -------->
+<div style="background: url(/static/img/background.jpg)" class="page-holder bg-cover">
+
 
 <div class="container-fluid">
     <div class="row">
@@ -15,8 +19,6 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
@@ -36,5 +38,8 @@
             </div>
         </div>
     </div>
+    </div>
+    </div>
+
 
 {%endblock%}

@@ -3,12 +3,14 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+<!------  Background    -------->
+<div style="background: url(/static/img/background.jpg)" class="page-holder bg-cover">
 
-
+<!------  Login / signup    -------->
     <div class="main-wrap">
     <div class="cover_1 cover_sm">
         <div class="container">
-            <div class="row align-items-center justify-content-center">
+            <div class="row align-items-center justify-content-center " id="bg">
             <div class="col-md-7" data-aos="fade-up">
                 <h2 class="heading">
                     {% if user.is_authenticated %}
@@ -20,7 +22,8 @@
             </div>
         </div>
         </div>
-    </div> <!-- .cover_1 -->
+    </div> 
+    <!-- reservation text  -->
     <div class="section" data-aos="fade-up">
         <div class="container">
         <div class="row justify-content-center mb-2">
@@ -35,7 +38,7 @@
             {% comment %}
 
             {% endcomment %}
-
+        <!------  Reservation Form    -------->
             <form action="" method="POST">
                 {% bootstrap_form form %}
                 {% csrf_token %}
@@ -47,7 +50,8 @@
             </div>
         </div>
         </div>
-    </div> <!-- .section -->
+    </div> 
+    <!-- Customer Reviews  -->
 
     <div class="map-wrap" id="map"  data-aos="fade"></div>
 
@@ -92,10 +96,10 @@
             </div>
         </div>
         </div>  
-    </div> <!-- .section -->
+    </div>
 
 
 
-    </div> <!-- .main-wrap -->
+    </div>
 
 {% endblock %}

@@ -1,19 +1,21 @@
 body,html {
     height: 100%;
 }
-
-#bg {
-    /* image used */ 
-    background: url("/static/img/background.jpg");
-
-    height:100%;
-
-    background-position:absolute;
-    background-repeat:no-repeat;
-    background-size:cover;
+ /* --------- Background  */
+.page-holder {
+    min-height: 100vh;
 }
 
+.bg-cover {
+    background-size: cover !important;
+}
 
+/* --------- index text  */
+.hero {
+    padding-top: 10%;
+}
+
+/* --------- nav bar and body */
 body {
     background-color: #F9FAFC;
 }
@@ -129,7 +131,7 @@ body {
     margin-left: 5%;
     color: lightgray;
 }
-
+/* --------- btn styling */
 .btn-signup {
     background-color: #9e6459;
     color: rgb(255, 255, 255);

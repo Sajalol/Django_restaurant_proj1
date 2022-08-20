@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load bootstrap4 %}
 
 <html class="h-100">
 
@@ -19,8 +20,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
-
-<body id="bg" class="d-flex flex-column h-100 main-bg">
+<body class="d-flex flex-column h-100">
 
     <!-- Navigation -->
 
@@ -60,14 +60,13 @@
             </div>
         </div>
     </nav>
-
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
-
+    
     <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark">
         <p class="m-0 text-center text-white">Made by Indian Fantastic</p>
@@ -76,6 +75,6 @@
          <a href="https://www.instagram.com" target=”_blank”><i class="fab fa-instagram-square ms-3"></i></a>
             <a href="https://www.youtube.com" target=”_blank”><i class="fab fa-youtube-square ms-3"></i></a></p>
     </footer>
-</body>
 
+</body>
 </html>

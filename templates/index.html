@@ -1,18 +1,22 @@
 {% extends "base.html" %}
+{% load bootstrap4 %}
 
 {% block content %}
+<!------  Background    --------> 
+<div style="background: url(/static/img/background.jpg)" class="page-holder bg-cover">
 
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <h1>Indian Fantastic</h1>
-            <div class="row">
-            </div>
+<!-------  introduction  ---->
+    <div class="container-fluid">
+    <div class="d-flex flex-column justify-content-center align-items-center hero">
+    <h1>Hello and welcome to Indian Fantastic! The best Indian food you can get!</h1>
+    <h4>Please feel free to take a look at our menu's page or book a table</h4>
+    <p>We are open 24/7</p>
+    <div class="btn-group">
+    <a href="{% url 'menu' %}"><button class="btn btn-signup" style="width: 107px;">Menu</button></a>
+    <a href="{% url 'reservation' %}"><button class="btn btn-signup">Reservation</button></a>
         </div>
     </div>
-
+</div>
 </div>
 
 {%endblock%}
