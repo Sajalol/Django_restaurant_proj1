@@ -25,6 +25,6 @@ class ReservationAdmin(admin.ModelAdmin):
 
 @admin.register(Menu)
 class MenuAdmin(SummernoteModelAdmin):
-    list_display = ('nameOfFood', 'meat', 'allergy', 'food_details', 'price')
+    list_display = ('nameOfFood', 'meat', 'allergy', 'details', 'price')
 
-    summernote_fields = ('food_details')
+    summernote_fields = ('details')

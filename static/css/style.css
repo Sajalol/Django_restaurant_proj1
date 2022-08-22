@@ -10,9 +10,24 @@ body,html {
     background-size: cover !important;
 }
 
+
 /* --------- index text  */
 .hero {
     padding-top: 10%;
+}
+
+/* --------- reservation text  */
+.padding {
+    padding-top: 3%;
+}
+
+div p { 
+    font-weight: bold;
+    font-weight: 500;
+}
+
+.lead {
+    font-weight: 500;
 }
 
 /* --------- nav bar and body */

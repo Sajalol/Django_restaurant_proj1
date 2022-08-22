@@ -3,7 +3,7 @@
 
 {% block content %}
 <!------  Background    -------->
-<div style="background: url(/static/img/background.jpg)" class="page-holder bg-cover">
+<div style="background: url(/static/img/background3.jpg)" class="page-holder bg-cover">
 
 
 <div class="container-fluid">
@@ -14,25 +14,19 @@
             <div class="row">
                 {% for menu in menu_list %}
                 <h2 class="card-title">{{ menu.nameOfFood }}</h2>
+                <h3 class="card-title">Type of meat: {{ menu.meat }}</h3>
+                <p class="card-title">Allergies: {{ menu.allergy }}</p>
+                <p class="card-title">Food description: {{ menu.details }}</p>
+                <p class="card-title">Price: {{ menu.price }}</p>
+                <img style='max-width: 500px;' src="{{ menu.image.url }}" alt="food">
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
-                                {% endif %}
-                            </div>
-                            <a href="#" class="post-link">
-                            </a>
-                            <hr />
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
             </div>
-            <div class="row">
-                {% endif %}
                 {% endfor %}
 
             </div>
