@@ -6,34 +6,21 @@
 <div style="background: url(/static/img/background3.jpg)" class="page-holder bg-cover">
 
 
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- menu entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
+    <div class="container-fluid">
+        <h1 class="d-flex flex-column justify-content-center align-items-center heading">Our Specials:</h1>
+        <div class="d-flex flex-column justify-content-center align-items-center">
                 {% for menu in menu_list %}
-                <h2 class="card-title">{{ menu.nameOfFood }}</h2>
-                <h3 class="card-title">Type of meat: {{ menu.meat }}</h3>
-                <p class="card-title">Allergies: {{ menu.allergy }}</p>
-                <p class="card-title">Food description: {{ menu.details }}</p>
-                <p class="card-title">Price: {{ menu.price }}</p>
-                <img style='max-width: 500px;' src="{{ menu.image.url }}" alt="food">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
+                <h2 class="name-item-mainmenu txt21 padding">{{ menu.nameOfFood }}</h2>
+                <p class="card-title max-char bold text-center">Food description:</p>
+                <p class="card-title max-char">{{ menu.details }}</p>
+                <p class="card-title bold">Available meat: {{ menu.meat }}</p>
+                <p class="card-title bold">Allergies: {{ menu.allergy }}</p>
+                <p class="card-title bold">Price: {{ menu.price }}$</p>
+                <img class="img-food" src="{{ menu.image.url }}" alt="food">
+                {% endfor %}
                         </div>
                     </div>
                 </div>
-            </div>
-                {% endfor %}
-
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
 
 
 {%endblock%}

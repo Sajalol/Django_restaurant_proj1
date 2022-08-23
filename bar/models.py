@@ -48,6 +48,6 @@ class Menu(models.Model):
     nameOfFood = models.CharField(max_length=30)
     meat = models.CharField(max_length=30)
     allergy = models.CharField(max_length=30)
-    details = models.CharField(max_length=160, default="")
+    details = models.CharField(max_length=999, default="")
     price = models.DecimalField(max_digits=5, decimal_places=2, default=149)
     image = CloudinaryField('image', default='/static/img/chicken_tandori_default.jpg')

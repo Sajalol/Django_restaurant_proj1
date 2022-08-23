@@ -18,7 +18,7 @@ body,html {
 
 /* --------- reservation text  */
 .padding {
-    padding-top: 3%;
+    padding-top: 2.5%;
 }
 
 div p { 
@@ -198,3 +198,17 @@ i:hover,
 i:active {
     background-color: #343434;
     color: #9e6459; }
+
+
+.img-food {
+    max-width: 700px;
+    max-height: 400px;
+}
+
+.max-char {
+    max-width: 70ch;
+}
+
+.bold {
+    font-weight: bold;
+}
