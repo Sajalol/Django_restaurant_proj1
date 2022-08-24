@@ -212,3 +212,7 @@ i:active {
 .bold {
     font-weight: bold;
 }
+
+.bolder {
+    font-weight: 400;
+}
