@@ -29,17 +29,19 @@ class Table(models.Model):
 
 
 class Reservation(models.Model):
-    name = models.CharField(max_length=50, default="",)
+    name = models.ForeignKey(Customer, on_delete=models.CASCADE,)
     email = models.EmailField(default="",)
     phone = models.IntegerField(default=12345678,)
     number_of_guests = models.IntegerField(default=3,)
     date = models.DateField(default=datetime.date.today)
     time = models.TimeField(default='00:00',)
     approved = models.BooleanField(default=False)
+    seats = models.ForeignKey(Table, on_delete=models.CASCADE, default='',)
 
     class Meta:
         verbose_name = 'reservation'
         verbose_name_plural = 'reservations'
+        unique_together = ('date', 'time', 'seats')
 
     def __str__(self) -> str:
         return self.name
