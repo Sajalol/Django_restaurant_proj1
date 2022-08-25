@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'bar',
     'bootstrap4',
+    'phonenumber_field',
 ]
 
 SITE_ID = 1

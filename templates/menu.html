@@ -7,10 +7,10 @@
 
 
     <div class="container-fluid">
-        <h1 class="d-flex flex-column justify-content-center align-items-center heading display-2">Our Specials:</h1>
+        <h1 class="d-flex flex-column justify-content-center align-items-center heading display-3">Our Specials:</h1>
         <div class="d-flex flex-column justify-content-center align-items-center">
                 {% for menu in menu_list %}
-                <h3 class="name-item-mainmenu txt21 padding display-5 bold">{{ menu.nameOfFood }}</h3>
+                <h3 class="name-item-mainmenu txt21 padding display-6 bold">{{ menu.nameOfFood }}</h3>
                 <h3 class="card-title max-char text-center bold">Food description:</h3>
                 <p class="card-title max-char lead">{{ menu.details }}</p>
                 <p class="card-title bold lead">Available meat: {{ menu.meat }}</p>

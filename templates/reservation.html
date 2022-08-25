@@ -6,29 +6,16 @@
 <!------  Background    -------->
 <div style="background: url(/static/img/background3.jpg)" class="page-holder bg-cover">
 
-<!------  Login / signup    -------->
-    <div class="main-wrap">
-    <div class="cover_1 cover_sm">
-        <div class="container">
-            <div class="row align-items-center justify-content-center padding">
-            <div class="col-md-7" data-aos="fade-up">
-                <h2 class="heading display-6 bolder">
-                    {% if user.is_authenticated %}
-                    Welcome back {{ user.username }}. And thanks for logging in.
-                {% else %}
-                    Welcome and please <a class="link" href="/accounts/login/">sign in</a> If you already have an account. If not, please <a class="link" href="/accounts/signup/">sign up</a>
-                {% endif %}</h2>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div> 
     <!-- reservation text  -->
     <div class="section" data-aos="fade-up">
         <div class="container">
         <div class="row justify-content-center mb-2">
             <div class="col-md-4  text-center padding">
-            <h3 class="mb-4 display-6 bolder">Welcome to our reservations page</h3>
+            <h3 class="mb-4 display-6 bolder text-center">Welcome {% if user.is_authenticated %} {{ user.username }} to our reservations page 
+                {% else %}
+                please <a class="link" href="/accounts/login/">sign in</a> If you already have an account. If not, please <a class="link" href="/accounts/signup/">sign up</a>
+                {% endif %}
+            </h3>
             <p class="lead">Please fill out the reservation form and write the name you'd like to reserve the table on.</p>
             </div>
         </div>
@@ -46,6 +33,9 @@
                     
             </form>
 
+            <p class="lead text-center">If all the marks are green your table has been reserved.</p>
+            <p class="lead text-center">If you have any red marks, please correct them and resubmit</p>
+
 
             </div>
         </div>
@@ -59,6 +49,7 @@
         <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 text-center"  data-aos="fade-up">
+                <p>------------------------------</p>
             <h2 class="mb-2">Customer's Reviews:</h2>
             </div>
         </div>
