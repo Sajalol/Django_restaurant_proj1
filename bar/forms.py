@@ -1,7 +1,6 @@
 from django import forms
 from django.forms import fields
 from .models import Reservation, Table
-from phonenumber_field.widgets import PhoneNumberPrefixWidget
 
 class DateInput(forms.DateInput):
     input_type = 'date'

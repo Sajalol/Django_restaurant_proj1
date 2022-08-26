@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load bootstrap4 %}
 {% block content %}
-{% load crispy_forms_tags %}
 
 <!------  Background    -------->
 <div style="background: url(/static/img/background3.jpg)" class="page-holder bg-cover">
@@ -27,15 +26,12 @@
             {% endcomment %}
         <!------  Reservation Form    -------->
             <form action="" method="POST">
+                {% include 'messages.html' %}
                 {% bootstrap_form form %}
                 {% csrf_token %}
                     <button type="submit" class="btn btn-signup">Reserve A Table</button>
                     
             </form>
-
-            <p class="lead text-center">If all the marks are green your table has been reserved.</p>
-            <p class="lead text-center">If you have any red marks, please correct them and resubmit</p>
-
 
             </div>
         </div>
