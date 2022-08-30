@@ -68,6 +68,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 DATE_INPUT_FORMATS = ['%d/%m/%Y']
 
+# Message tags for form
+
 MESSAGE_TAGS = {
         messages.DEBUG: 'alert-secondary',
         messages.INFO: 'alert-info',

@@ -16,6 +16,7 @@ class MenuList(generic.ListView):
     template_name = 'menu.html'
 
 
+# Reservation form, requires you to login first
 @login_required()
 def reserve_table(request):
     reserve_form = ReserveTableForm()

@@ -8,6 +8,8 @@ class DateInput(forms.DateInput):
 class TimeInput(forms.TimeInput):
     input_type = 'time'
 
+# Reservation form
+
 class ReserveTableForm(forms.ModelForm):
     class Meta:
         model = Reservation
