@@ -30,19 +30,35 @@ class Table(models.Model):
 
 
 class Reservation(models.Model):
-    name = models.CharField(max_length=50, default="")
-    email = models.EmailField(default="",)
-    phone = PhoneNumberField()
-    number_of_guests = models.IntegerField(default=3,)
-    date = models.DateField(default=datetime.date.today)
-    time = models.TimeField(default='00:00',)
-    approved = models.BooleanField(default=True)
-    seats = models.ForeignKey(Table, on_delete=models.CASCADE, default='',)
 
     class Meta:
         verbose_name = 'reservation'
         verbose_name_plural = 'reservations'
         unique_together = ('date', 'time', 'seats')
+
+    TIME_LIST = (
+        (0, '10:00 – 11:00'),
+        (1, '11:00 – 12:00'),
+        (2, '12:00 – 13:00'),
+        (3, '13:00 – 14:00'),
+        (4, '14:00 – 15:00'),
+        (5, '15:00 – 16:00'),
+        (6, '16:00 – 17:00'),
+        (7, '17:00 – 18:00'),
+        (8, '18:00 – 19:00'),
+        (9, '19:00 – 20:00'),
+        (10,'20:00 – 21:00'),
+        (11,'21:00 – 22:00'),
+    )
+
+    name = models.CharField(max_length=50, default="")
+    email = models.EmailField(default="",)
+    phone = PhoneNumberField()
+    number_of_guests = models.IntegerField(default=3,)
+    date = models.DateField(default=datetime.date.today)
+    time = models.IntegerField(choices=TIME_LIST, default=0)
+    approved = models.BooleanField(default=True)
+    seats = models.ForeignKey(Table, on_delete=models.CASCADE, default='',)
 
     def __str__(self) -> str:
         return self.name

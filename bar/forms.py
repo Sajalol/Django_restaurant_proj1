@@ -16,5 +16,4 @@ class ReserveTableForm(forms.ModelForm):
         fields = ('name', 'email', 'phone', 'number_of_guests', 'date', 'time', 'seats',)
         widgets = {
             'date':DateInput(),
-            'time':TimeInput(),
         }
