@@ -30,7 +30,7 @@ def reserve_table(request):
 
             if reserve_form.is_valid():
                 form = reserve_form.save(commit=False)
-                reserve_form.user = User.objects.get(username=request.user.username)
+                form.user = request.user
                 form.save()
                 messages.success(request, 'Your reservation has been submitted successfully.')
             else:

@@ -13,8 +13,7 @@ class TimeInput(forms.TimeInput):
 class ReserveTableForm(forms.ModelForm):
     class Meta:
         model = Reservation
-        readonly_fields = 'user'
-        fields = ('user', 'phone', 'number_of_guests', 'date', 'time', 'seats',)
+        fields = ('phone', 'number_of_guests', 'date', 'time', 'seats',)
         widgets = {
             'date':DateInput(),
         }
