@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from phonenumber_field.modelfields import PhoneNumberField
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 
 
@@ -62,7 +62,7 @@ class Reservation(models.Model):
     seats = models.ForeignKey(Table, on_delete=models.CASCADE, default='',)
 
     def __str__(self) -> str:
-        return self.name
+        return self.user.username
 
 class Menu(models.Model):
     nameOfFood = models.CharField(max_length=30)
