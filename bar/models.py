@@ -3,6 +3,8 @@ import datetime
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from phonenumber_field.modelfields import PhoneNumberField
+from django.db import models
+from django.contrib.auth.models import User
 
 
 
@@ -51,8 +53,7 @@ class Reservation(models.Model):
         (11,'21:00 – 22:00'),
     )
 
-    name = models.CharField(max_length=50, default="")
-    email = models.EmailField(default="",)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     phone = PhoneNumberField()
     number_of_guests = models.IntegerField(default=3,)
     date = models.DateField(default=datetime.date.today)

@@ -20,6 +20,10 @@ class MenuList(generic.ListView):
 @login_required()
 def reserve_table(request):
     reserve_form = ReserveTableForm()
+    user = None
+    if request.user.is_authenticated:
+        user = request.user.username
+    
 
     if request.method == 'POST':
         reserve_form = ReserveTableForm(request.POST)
