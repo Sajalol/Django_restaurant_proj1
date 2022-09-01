@@ -1,14 +1,11 @@
 from django.contrib import admin
-from .models import Restaurant, Customer, Table, Reservation, Menu
+from .models import Restaurant, Table, Reservation, Menu
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Restaurant)
 class RestaurantAdmin(admin.ModelAdmin):
     list_display = ('name', 'address', 'city', 'country')
 
-@admin.register(Customer)
-class CustomerAdmin(admin.ModelAdmin):
-     list_display = ('email', 'first_name', 'last_name')
 
 @admin.register(Table)
 class TableAdmin(admin.ModelAdmin):

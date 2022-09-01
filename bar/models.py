@@ -14,14 +14,6 @@ class Restaurant(models.Model):
     city = models.CharField(max_length=120, default='Kristiansund')
     country = models.CharField(max_length=120, default='Norway')
 
-class Customer(models.Model):
-    email = models.EmailField()
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-
-    def __str__(self):
-        return self.first_name + " " + self.email
-
 class Table(models.Model):
     seats = models.IntegerField()
     min_people = models.IntegerField()

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Restaurant, Menu, Reservation, Customer, Table, User
+from .models import Restaurant, Menu, Reservation, Table, User
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.forms import Form
