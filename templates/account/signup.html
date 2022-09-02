@@ -5,6 +5,8 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
+<!------  Background    -------->
+<div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)" class="page-holder bg-cover">
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
@@ -23,9 +25,9 @@
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
                 <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-
 {% endblock %}
