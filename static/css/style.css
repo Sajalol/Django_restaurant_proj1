@@ -199,6 +199,8 @@ i:active {
     background-color: #343434;
     color: #9e6459; }
 
+
+
 /* --------- menu styling */
 .img-food {
     max-width: 700px;
@@ -215,6 +217,10 @@ i:active {
 
 .bolder {
     font-weight: 400;
+}
+
+.contact-info {
+    margin-top: 10px;
 }
 
 
