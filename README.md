@@ -1,108 +1,183 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Indian Fantastic
 
-Welcome Stian Lystad,
+## Nav Bar
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The navbar is easy to navigate, and features all three pages and the sign up, sign in and logout if you're logged in. And the navbar is full responsive. The navbar is alike on all the pages.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![nav_bar](https://res.cloudinary.com/saja/image/upload/v1662210575/static/img/nav_bar_pn4zur.png)
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Footer
 
-A blue button should appear to click: _Make Public_,
+* The footer includes: 
+    - links to our social page, with included _blank to avoid the users leaving our page.
+    - Location of the restaurant, with country, city and local address
+    - Opening hours
+    - Contact information
 
-Another blue button should appear to click: _Open Browser_.
+    - ![footer](https://res.cloudinary.com/saja/image/upload/v1662212651/static/img/footer_vyugok.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Landing Page
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The landing page for the restaurant will show you some welcoming text, opening hours and easy navigation to the menu with special dishes and the reservation page. 
 
-To log into the Heroku toolbelt CLI:
+![Welcome_text](https://res.cloudinary.com/saja/image/upload/v1662208140/static/img/welcome_ruybsa.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+## Menu page
 
-## Release History
+The menu page has a list of the restaurants special dishes.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Menu](https://res.cloudinary.com/saja/image/upload/v1662208334/static/img/menu.page_zb7abp.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Reservation Page
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+To access the reservation page you have to login. If you're not logged in, and you click the reservation page you will be sent to a sign in page. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Sign_in](https://res.cloudinary.com/saja/image/upload/v1662209060/static/img/sign_in_qiiut9.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+After you have signed in, you will be welcomed with your username on the reservation page and asked to fill out the reservation form
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![reservation_form](https://res.cloudinary.com/saja/image/upload/v1662209059/static/img/reservation_form_vibhlk.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+When you have successfully reserved a table, you get a success message.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![reservation_success](https://res.cloudinary.com/saja/image/upload/v1662209892/static/img/reservation_successful_wjvw2g.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+If you try to reserve a table thats already reserved on that date and time you get a error massage
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![reservation_error](https://res.cloudinary.com/saja/image/upload/v1662209891/static/img/reservation_form_error_ap1ydy.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
 
-## FAQ about the uptime script
+## Sign Up Page
 
-**Why have you added this script?**
+The sign up page has some welcoming text and asks for:
+- Username
+- Email
+- Password and repeat the password again
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![sign_up](https://res.cloudinary.com/saja/image/upload/v1662213001/static/img/Sign_up_yqbcrp.png)
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+# Admin Page Features 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Admin Menu Page
 
-**Can I opt out?**
+The owner of the page can easly edit the menu page through the admin menu page. With deleting current menu's or add more / add new menu's to the page
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Menu_admin](https://res.cloudinary.com/saja/image/upload/v1662208564/static/img/menu_admin_zwahi3.png)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+* To add a menu just click "+ Add" or "Add Menu +" in the top right corner and fill out the info thats needed.
+* To delete a menu, just select which menu you would like to delete left of the name, and choose "Deleted selected Menus" in Action: and press "Go".
+* This will add or delete a menu in the menu page
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+## Reservation Admin Page
 
-Happy coding!
+When the reservation has been sent successfully, the owner of the page can easly see the reservation in the admin page with: Username, phone number, number of guests, date, time and seats.
+Currently the reservations gets auto approved.
+
+![reservation_admin](https://res.cloudinary.com/saja/image/upload/v1662210222/static/img/reservation_complete_jdfzia.png)
+
+
+
+## Adding Tables Admin Page
+
+The owner of the page can easly add or remove more tables available for reservation. This can be done by:
+* Adding seats:
+    - Click Tables and or "+Add" next to Tables or "Add Table +" in the top right corner.
+    ![adding_table](https://res.cloudinary.com/saja/image/upload/v1662212065/static/img/admin_tables_yyhw6e.png)
+    - Then fill out how many seats the table has, with minimum seats and maximum.
+
+    ![adding_seats](https://res.cloudinary.com/saja/image/upload/v1662212064/static/img/seats_admin_g9tyah.png)
+
+* Deleting seats:
+    - In the "Tables" section, click the selected table you would like to delete and choose "Delete selected tables" and click "Go". 
+    - ![deleting_seats](https://res.cloudinary.com/saja/image/upload/v1662212227/static/img/delete_seats_ghoepq.png)
+
+
+
+
+# Testing
+
+
+## Validator Testing
+
+* HTML
+    - No errors returned when passing through <a href="https://validator.w3.org/" target="_blank">HTML Validator</a>, except the django text.
+* CSS
+    - No errors returned when passing through <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">CSS Validator</a>.
+
+
+
+## Reservation Form Testing
+
+* Variations of testing:
+    - Testing to reserve on the same date, time and table. Testing with multiple users. Making sure it gives an error when trying to reserve an occupied table on the same time and date. 
+    - Testing to try to reserve without filling out all the whole form.
+    - Testing the access without login in.
+    - Testing that the info from the user that reserves the table always comes in the admin page.
+
+
+
+## Menu Form Testing
+
+* Variations of testing:
+    - Testing to delete menu and see if it gets deleted in the menu page.
+    - Testing to add more menu's and see if it gets added in the menu page.
+
+
+
+## Testing Buttons
+
+* Testing that all the nav buttons, reservation form button, nav buttons and footer button works.
+
+
+## Sign in / Sign out
+
+* Testing that login, logout etc works without any issues
+
+
+
+## Testing On Multiple Devices
+
+* Testing the web page on different devices with no issues. The webpage is responsive from desktop, to small mobile phones and tablets. 
+* For some reason <a href="https://ui.dev/amiresponsive" target="_blank">amIresponsive</a> won't load my web page. But tested the webpage with using the toggle device toolbar option available in the developer tools in Chrome. And also loaded the page on my physical phone and ipad to make sure it loaded. 
+
+
+## Unfixed bugs
+
+* Currently no known bugs
+
+
+# Deployment
+
+This project was deployed using Heroku
+
+* Steps for deployment:
+    - Create a new Heroku App
+    - Create database in heroku, using postgres
+    - Link the heroku app to the repository
+    - Add the needed info in config vars
+    - Click Deploy
+    - <a href="https://django-restaurant-1.herokuapp.com/" target="_blank">Heroku Link</a>
+
+
+# Credits
+
+* Code Institute for training.
+* Various articles and youtubers for ideas. 
+* Bootstrap for making templates much easier.
