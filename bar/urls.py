@@ -5,5 +5,5 @@ from bar import views
 urlpatterns = [
     path('', views.RestaurantList.as_view(), name='home'),
     path('menu', views.MenuList.as_view(), name='menu'),
-    path('reservation', views.reserve_table, name='reservation')    
+    path('reservation', views.reserve_table, name='reservation'),    
 ]

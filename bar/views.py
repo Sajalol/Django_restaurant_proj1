@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.forms import Form
 from django.contrib.auth.decorators import login_required
 from .forms import ReserveTableForm
+from django.views.generic.edit import DeleteView
 
 class RestaurantList(generic.ListView):
     model = Restaurant
@@ -39,3 +40,6 @@ def reserve_table(request):
     context = {'form': reserve_form}
 
     return render(request, 'reservation.html', context)
+
+
+# Delete event
