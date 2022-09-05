@@ -34,7 +34,7 @@ def reserve_table(request):
                 form.save()
                 messages.success(request, 'Your reservation has been submitted successfully.')
             else:
-                messages.error(request, 'Invalid form submission, correct the ones with error.')
+                messages.error(request, 'Invalid form submission, correct the lines with error.')
 
     context = {'form': reserve_form}
 

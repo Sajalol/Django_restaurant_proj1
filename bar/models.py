@@ -7,7 +7,7 @@ from django.db import models
 # from django.contrib.auth.models import User
 
 
-
+# This class can be used in the future, not in use at the moment
 class Restaurant(models.Model):
     name = models.CharField(max_length=120)
     address = models.CharField(max_length=120, default='Kings Place')
@@ -61,5 +61,5 @@ class Menu(models.Model):
     meat = models.CharField(max_length=30)
     allergy = models.CharField(max_length=30)
     details = models.CharField(max_length=999, default="")
-    price = models.DecimalField(max_digits=5, decimal_places=2, default=149)
-    image = CloudinaryField('image', default='/static/img/chicken_tandori_default.jpg')
+    price = models.DecimalField(max_digits=5, decimal_places=2, default=15)
+    image = CloudinaryField('image', default='')
