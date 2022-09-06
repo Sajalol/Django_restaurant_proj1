@@ -75,10 +75,10 @@ def list_view(request):
 
 # detail view
 
-def detail_view(request, id):
+def detail_view(request, reservation_id):
+
 
     context ={}
 
-    context["data"] = Reservation.objects.get(id = id)
-
+    context["data"] = Reservation.objects.get(id = reservation_id)
     return render(request, "detail_view.html", context)
