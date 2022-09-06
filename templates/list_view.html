@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<div class="main">
+ 
+    {% for data in dataset %}.
+ 
+    {{ data.user }}<br/>
+    {{ data.seats }}<br/>
+    <hr/>
+ 
+    {% endfor %}
+ 
+</div>
+{%endblock%}

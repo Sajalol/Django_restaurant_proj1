@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from django.views import generic, View
 from .models import Restaurant, Menu, Reservation, Table, User
 from django.shortcuts import redirect
@@ -43,3 +43,42 @@ def reserve_table(request):
 
 
 # Delete event
+
+def delete_view(request):
+    reserve_form = ReserveTableForm()
+    user = None
+    obj = get_object_or_404(Reservation)
+    if request.user.is_authenticated:
+         
+        if request.method == 'POST':
+            reserve_form = ReserveTableForm(request.POST)
+
+            if reserve_form.is_valid():
+                form.user = request.user
+                obj.delete()
+
+    context = {'form': reserve_form}
+
+    return render(request, "delete_view.html", context)
+
+
+# List reservations
+
+def list_view(request):
+    context = {}
+
+    context["dataset"] = Reservation.objects.all()
+
+    return render(request, "list_view.html", context)
+
+
+
+# detail view
+
+def detail_view(request, id):
+
+    context ={}
+
+    context["data"] = Reservation.objects.get(id = id)
+
+    return render(request, "detail_view.html", context)
