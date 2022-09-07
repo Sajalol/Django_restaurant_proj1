@@ -2,6 +2,8 @@
 {% load bootstrap4 %}
 
 {% block content %}
+<!------  Background    -------->
+<div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)" class="page-holder bg-cover">
 
 <div class="main">
  
@@ -9,9 +11,12 @@
  
     {{ data.user }}<br/>
     {{ data.seats }}<br/>
+    <a href="/delete_view/{{ reservation.id }}">
+        <button>Delete</button>
+    </a>
     <hr/>
- 
     {% endfor %}
  
+</div>
 </div>
 {%endblock%}

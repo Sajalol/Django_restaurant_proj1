@@ -7,6 +7,7 @@ from django.forms import Form
 from django.contrib.auth.decorators import login_required
 from .forms import ReserveTableForm
 from django.views.generic.edit import DeleteView
+from django.core.exceptions import PermissionDenied
 
 class RestaurantList(generic.ListView):
     model = Restaurant
@@ -47,6 +48,9 @@ def reserve_table(request):
 # List reservations
 
 def list_view(request):
+    if not request.user.is_staff:
+        raise PermissionDenied("You need to be staff to access this")
+    
     context = {}
 
     context["dataset"] = Reservation.objects.all()

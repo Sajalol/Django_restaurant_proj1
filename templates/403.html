@@ -6,14 +6,15 @@
 <!------  Background    -------->
 <div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)" class="page-holder bg-cover">
 
+    {% if exception %}
+    <div class="container-fluid">
+    <h1 class="d-flex flex-column justify-content-center align-items-center heading display-4 bold">{{ exception }}</h1>
+{% else %}
+  <p>Static generic message</p>
+{% endif %}
 
-<div class="main">
-     
-    <!-- Specify fields to be displayed -->
-    {{ data.user }}<br/>
-    {{ data.seats }}<br/>
-    <a href="/delete_view/{{ reservation.id }}">
-        <button>Delete</button>
-    </a>
+
+
 </div>
+
 {% endblock content %}
