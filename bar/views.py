@@ -59,7 +59,7 @@ def list_view(request):
 
 
 
-# Detail View
+# Detail View needed to get ID for deletion
 
 def detail_view(request, reservation_id):
 
@@ -67,7 +67,6 @@ def detail_view(request, reservation_id):
 
     reservation = get_object_or_404(Reservation, id=reservation_id)
     context["data"] = Reservation.objects.get(id = reservation_id)
-    return render(request, "detail_view.html", context)
 
 
 # Delete View, needed to be able to delete in list_view

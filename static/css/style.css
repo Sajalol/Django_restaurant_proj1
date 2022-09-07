@@ -218,7 +218,7 @@ i:active {
     font-weight: 400;
 }
 
-
+/* List view styling */
 
 /* List with bullets */
 .list-bullets {
@@ -240,27 +240,3 @@ i:active {
     display: block;
     margin-right: 1rem;
 }
-
-/* Unordered list with custom numbers style */
-ol.custom-numbers {
-    list-style: none;
-}
-
-ol.custom-numbers li {
-    counter-increment: my-awesome-counter;
-}
-
-ol.custom-numbers li::before {
-    content: counter(my-awesome-counter) ". ";
-    color: #2b90d9;
-    font-weight: bold;
-}
-
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSES
-* ==========================================
-*
-*/
