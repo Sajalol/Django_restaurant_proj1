@@ -8,7 +8,9 @@
     <!-- Specify fields to be displayed -->
     {{ data.user }}<br/>
     {{ data.seats }}<br/>
- 
+    <a href="/delete_view/{{ reservation.id }}">
+        <button>Delete</button>
+    </a>
 </div>
 
 {%endblock%}

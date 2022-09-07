@@ -42,24 +42,6 @@ def reserve_table(request):
     return render(request, 'reservation.html', context)
 
 
-# Delete event
-
-def delete_view(request):
-    reserve_form = ReserveTableForm()
-    user = None
-    obj = get_object_or_404(Reservation)
-    if request.user.is_authenticated:
-         
-        if request.method == 'POST':
-            reserve_form = ReserveTableForm(request.POST)
-
-            if reserve_form.is_valid():
-                form.user = request.user
-                obj.delete()
-
-    context = {'form': reserve_form}
-
-    return render(request, "delete_view.html", context)
 
 
 # List reservations
@@ -80,5 +62,17 @@ def detail_view(request, reservation_id):
 
     context ={}
 
+    reservation = get_object_or_404(Reservation, id=reservation_id)
     context["data"] = Reservation.objects.get(id = reservation_id)
     return render(request, "detail_view.html", context)
+
+
+# delete view
+def delete_view(request, reservation_id):
+
+    context ={}
+
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    context["data"] = Reservation.objects.get(id = reservation_id)
+    reservation.delete()
+    return render(request, "delete_view.html", context)

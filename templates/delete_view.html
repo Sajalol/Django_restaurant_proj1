@@ -2,15 +2,12 @@
 
 {% block content %}
 <div class="main">
-<form action="{% url'delete_view' reservation.id %} " method="POST">
-    {% csrf_token %}
-
-    <h3>Are you sure ?</h3>
-
-    <a class="btn btn-info" href="/">No</a>
-    <input type="submit" value="Yes" />
-    <a href="/">Cancel</a>
-
-</form>
+     
+    <!-- Specify fields to be displayed -->
+    {{ data.user }}<br/>
+    {{ data.seats }}<br/>
+    <a href="/delete_view/{{ reservation.id }}">
+        <button>Delete</button>
+    </a>
 </div>
 {% endblock content %}
