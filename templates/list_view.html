@@ -11,7 +11,7 @@
  
     {{ data.user }}<br/>
     {{ data.seats }}<br/>
-    <a href="/delete_view/{{ reservation.id }}">
+    <a href="{% url 'delete' data.pk %}">
         <button>Delete</button>
     </a>
     <hr/>

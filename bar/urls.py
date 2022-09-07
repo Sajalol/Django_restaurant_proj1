@@ -8,5 +8,5 @@ urlpatterns = [
     path('reservation', views.reserve_table, name='reservation'),
     path('list_view', views.list_view, name='list'),
     path('detail_view/<reservation_id>', views.detail_view, name='detail'),
-    path('delete_view/<reservation_id>', views.delete_view, name='delete'), 
+    path('delete_view/<int:reservation_id>', views.delete_view, name='delete'), 
 ]

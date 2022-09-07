@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, redirect, reverse
 from django.views import generic, View
 from .models import Restaurant, Menu, Reservation, Table, User
 from django.shortcuts import redirect
@@ -63,7 +63,6 @@ def list_view(request):
 
 def detail_view(request, reservation_id):
 
-
     context ={}
 
     reservation = get_object_or_404(Reservation, id=reservation_id)
@@ -74,9 +73,7 @@ def detail_view(request, reservation_id):
 # delete view
 def delete_view(request, reservation_id):
 
-    context ={}
 
-    reservation = get_object_or_404(Reservation, id=reservation_id)
-    context["data"] = Reservation.objects.get(id = reservation_id)
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
     reservation.delete()
-    return render(request, "delete_view.html", context)
+    return redirect(reverse('list'))
