@@ -45,7 +45,7 @@ def reserve_table(request):
 
 
 
-# List reservations
+# List of Reservations, requires admin or staff to access it. Also access to delete reservations
 
 def list_view(request):
     if not request.user.is_staff:
@@ -59,7 +59,7 @@ def list_view(request):
 
 
 
-# detail view
+# Detail View
 
 def detail_view(request, reservation_id):
 
@@ -70,7 +70,7 @@ def detail_view(request, reservation_id):
     return render(request, "detail_view.html", context)
 
 
-# delete view
+# Delete View, needed to be able to delete in list_view
 def delete_view(request, reservation_id):
 
 
