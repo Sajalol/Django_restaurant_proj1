@@ -14,6 +14,8 @@ class Restaurant(models.Model):
     city = models.CharField(max_length=120, default='Kristiansund')
     country = models.CharField(max_length=120, default='Norway')
 
+
+# Table model
 class Table(models.Model):
     seats = models.IntegerField()
     min_people = models.IntegerField()
@@ -22,7 +24,7 @@ class Table(models.Model):
     def __str__(self):
         return str(self.seats)
 
-
+# Reservation model
 class Reservation(models.Model):
 
     class Meta:
@@ -57,6 +59,7 @@ class Reservation(models.Model):
     def __str__(self) -> str:
         return self.user.username
 
+# Menu for model
 class Menu(models.Model):
     nameOfFood = models.CharField(max_length=30)
     meat = models.CharField(max_length=30)
