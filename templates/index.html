@@ -3,21 +3,23 @@
 
 
 {% block content %}
-<!------  Background    --------> 
-<div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)" class="jumbotron page-holder bg-cover">
+<!------  Background    -------->
+<div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)"
+    class="jumbotron page-holder bg-cover">
 
-<!-------  introduction  ---->
+    <!-------  introduction  ---->
     <div class="container-fluid">
-    <div class="d-flex flex-column justify-content-center align-items-center hero">
-    <h1 class="display-6 bolder mt-2">Hello and welcome to Indian Fantastic! The best Indian food you can get!</h1>
-    <h4 class="display-7 bolder mt-2">Please feel free to take a look at our menu's page or book a table</h4>
-    <p class="display-6 bold mt-2">We are open from 10.00 to 22.00</p>
-    <div class="btn-group">
-    <a href="{% url 'menu' %}"><button class="btn btn-signup" style="width: 107px;">Menu</button></a>
-    <a href="{% url 'reservation' %}"><button class="btn btn-signup">Reservation</button></a>
+        <div class="d-flex flex-column justify-content-center align-items-center hero">
+            <h1 class="display-6 bolder mt-2">Hello and welcome to Indian Fantastic! The best Indian food you can get!
+            </h1>
+            <h4 class="display-7 bolder mt-2">Please feel free to take a look at our menu's page or book a table</h4>
+            <p class="display-6 bold mt-2">We are open from 10.00 to 22.00</p>
+            <div class="btn-group">
+                <a href="{% url 'menu' %}"><button class="btn btn-signup" style="width: 107px;">Menu</button></a>
+                <a href="{% url 'reservation' %}"><button class="btn btn-signup">Reservation</button></a>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 {%endblock%}

@@ -3,7 +3,8 @@
 
 {% block content %}
 <!------  Background    -------->
-<div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)" class="jumbotron page-holder bg-cover">
+<div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)"
+    class="jumbotron page-holder bg-cover">
 
     <div class="container py-5">
         <!-- Reservation List -->
@@ -11,17 +12,17 @@
             <h1 class="display-4">Reservation List</h1>
             <p class="lead mb-0 font-italic">Collection of all reservations</p>
         </header>
-        
+
         <!-- Reservation cards -->
 
         <div class="row py-5">
             <div class="col-lg-7 mx-auto">
-    
-                <div class="card shadow mb-4" >
+
+                <div class="card shadow mb-4">
                     <div class="card-body p-5 bg-dark text-white" style="border: 2px solid #a5a0a0;">
                         {% for data in dataset %}
-                        <h4 class="mb-4" >Reservation</h4>
-                        <ul class="list-bullets" >
+                        <h4 class="mb-4">Reservation</h4>
+                        <ul class="list-bullets">
                             <li class="mb-2">Username: {{ data.user }}</li>
                             <li class="mb-2">Telephone Number: {{ data.phone }}</li>
                             <li class="mb-2">Date: {{ data.date }}</li>
@@ -29,38 +30,42 @@
                             <li class="mb-2">Number of Guests: {{ data.number_of_guests }}</li>
                             <li class="mb-2">Seats: {{ data.seats }}</li>
                             <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-signup" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        Delete Reservation
-                                    </button>
-                                    
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header bg-dark">
+                            <button type="button" class="btn btn-signup" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Delete Reservation
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-dark">
                                             <h5 class="modal-title" id="exampleModalLabel">Delete Reservation</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body bg-dark">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body bg-dark">
                                             Are you sure you want to delete this reservation?
-                                            </div>
-                                            <div class="modal-footer bg-dark">
-                                            <button type="button" class="btn btn-signup" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                        <div class="modal-footer bg-dark">
+                                            <button type="button" class="btn btn-signup"
+                                                data-bs-dismiss="modal">Close</button>
                                             <a href="{% url 'delete' data.pk %}">
                                                 <button class="btn btn-signup">Delete</button>
                                             </a>
-                                            </div>
-                                        </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
                         </ul>
                         <hr>
                         {% endfor %}
                     </div>
                 </div>
-                </div>
             </div>
         </div>
     </div>
+</div>
  
 {%endblock%}

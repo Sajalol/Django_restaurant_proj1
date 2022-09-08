@@ -3,24 +3,25 @@
 
 {% block content %}
 <!------  Background    -------->
-<div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)" class="page-holder bg-cover">
+<div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)"
+    class="page-holder bg-cover">
 
-<!------  The menu's    -------->
+    <!------  The menu's    -------->
     <div class="container-fluid">
         <h1 class="d-flex flex-column justify-content-center align-items-center heading display-3">Our Specials:</h1>
         <div class="d-flex flex-column justify-content-center align-items-center ">
-                {% for menu in menu_list %}
-                <h3 class="name-item-mainmenu txt21 padding display-6 bold mt-1">{{ menu.nameOfFood }}</h3>
-                <h3 class="card-title max-char text-center bold mt-1">Food description:</h3>
-                <p class="card-title max-char lead mt-1">{{ menu.details }}</p>
-                <p class="card-title lead mt-1">Available meat: {{ menu.meat }}</p>
-                <p class="card-title lead mt-1">Allergies: {{ menu.allergy }}</p>
-                <p class="card-title lead pb-2">Price: {{ menu.price }}$</p>
-                <img class="img-food pb-3" src="{{ menu.image.url }}" alt="food">
-                {% endfor %}
-                        </div>
-                    </div>
-                </div>
+            {% for menu in menu_list %}
+            <h3 class="name-item-mainmenu txt21 padding display-6 bold mt-1">{{ menu.nameOfFood }}</h3>
+            <h3 class="card-title max-char text-center bold mt-1">Food description:</h3>
+            <p class="card-title max-char lead mt-1">{{ menu.details }}</p>
+            <p class="card-title lead mt-1">Available meat: {{ menu.meat }}</p>
+            <p class="card-title lead mt-1">Allergies: {{ menu.allergy }}</p>
+            <p class="card-title lead pb-2">Price: {{ menu.price }}$</p>
+            <img class="img-food pb-3" src="{{ menu.image.url }}" alt="food">
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 
 {%endblock%}

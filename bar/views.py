@@ -70,6 +70,7 @@ def detail_view(request, reservation_id):
 
 
 # Delete View, needed to be able to delete in list_view
+
 def delete_view(request, reservation_id):
 
 
