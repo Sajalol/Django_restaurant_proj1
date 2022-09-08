@@ -162,6 +162,15 @@ The owner of the page can easly add or remove more tables available for reservat
 
 <br>
 
+## Reservation Deletion from List View 
+
+* Variations of testing:
+    - Confirming that new reservations show up in the list view.
+    - Confirming that when you delete a reservation from the list view its actually deleted with confirming in admin view.
+    - List getting instantly updated
+
+<br>
+
 ## Menu Form Testing
 
 * Variations of testing:
