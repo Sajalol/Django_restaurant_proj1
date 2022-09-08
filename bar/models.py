@@ -29,6 +29,7 @@ class Reservation(models.Model):
         verbose_name = 'reservation'
         verbose_name_plural = 'reservations'
         unique_together = ('date', 'time', 'seats')
+        ordering = ('date',)
 
     TIME_LIST = (
         (0, '10:00 – 11:00'),

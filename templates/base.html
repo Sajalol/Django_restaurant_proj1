@@ -42,6 +42,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'reservation' %}">Reservations</a>
                     </li>
+                    {% if request.user.is_staff %}
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'list' %}">Reservation List</a>
+                  </li>
+                  {% endif %}
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>

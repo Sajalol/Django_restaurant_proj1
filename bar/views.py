@@ -49,7 +49,7 @@ def reserve_table(request):
 
 def list_view(request):
     if not request.user.is_staff:
-        raise PermissionDenied("You need to be staff to access this page")
+        raise PermissionDenied("403..You need to be staff to access this page")
     
     context = {}
 
