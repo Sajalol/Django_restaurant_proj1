@@ -92,12 +92,12 @@ The sign up page has some welcoming text and asks for:
 ![sign_up](https://res.cloudinary.com/saja/image/upload/v1662213001/static/img/Sign_up_yqbcrp.png)
 
 
-<br></br>
+<br>
 
 
 # Admin Page Features 
 
-<br></br>
+<br>
 
 ## Admin Menu Page
 
@@ -109,7 +109,7 @@ The owner of the page can easly edit the menu page through the admin menu page. 
 * To delete a menu, just select which menu you would like to delete left of the name, and choose "Deleted selected Menus" in Action: and press "Go".
 * This will add or delete a menu in the menu page
 
-<br></br>
+<br>
 
 ## Reservation Admin Page
 
@@ -118,7 +118,7 @@ Currently the reservations gets auto approved.
 
 ![reservation_admin](https://res.cloudinary.com/saja/image/upload/v1662210222/static/img/reservation_complete_jdfzia.png)
 
-<br></br>
+<br>
 
 ## Adding Tables Admin Page
 
@@ -136,11 +136,11 @@ The owner of the page can easly add or remove more tables available for reservat
 
 
 
-<br></br>
+<br>
 
 # Testing
 
-<br></br>
+<br>
 
 ## Validator Testing
 
@@ -149,7 +149,7 @@ The owner of the page can easly add or remove more tables available for reservat
 * CSS
     - No errors returned when passing through <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">CSS Validator</a>.
 
-<br></br>
+<br>
 
 
 ## Reservation Form Testing
@@ -160,7 +160,7 @@ The owner of the page can easly add or remove more tables available for reservat
     - Testing the access without login in.
     - Testing that the info from the user that reserves the table always comes in the admin page.
 
-<br></br>
+<br>
 
 ## Menu Form Testing
 
@@ -168,32 +168,32 @@ The owner of the page can easly add or remove more tables available for reservat
     - Testing to delete menu and see if it gets deleted in the menu page.
     - Testing to add more menu's and see if it gets added in the menu page.
 
-<br></br>
+<br>
 
 ## Testing Buttons
 
 * Testing that all the nav buttons, reservation form button, nav buttons and footer button works.
 
-<br></br>
+<br>
 
 ## Sign in / Sign out
 
 * Testing that login, logout etc works without any issues
 
-<br></br>
+<br>
 
 ## Testing On Multiple Devices
 
 * Testing the web page on different devices with no issues. The webpage is responsive from desktop, to small mobile phones and tablets. 
 * For some reason <a href="https://ui.dev/amiresponsive" target="_blank">amIresponsive</a> won't load my web page. But tested the webpage with using the toggle device toolbar option available in the developer tools in Chrome. And also loaded the page on my physical phone and ipad to make sure it loaded. 
 
-<br></br>
+<br>
 
 ## Unfixed bugs
 
 * No known bugs
 
-<br></br>
+<br>
 
 # Deployment
 
@@ -207,7 +207,7 @@ This project was deployed using Heroku
     - Click Deploy
     - <a href="https://django-restaurant-1.herokuapp.com/" target="_blank">Heroku Link</a>
 
-<br></br>
+<br>
 
 # Credits
 
