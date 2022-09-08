@@ -191,7 +191,7 @@ The owner of the page can easly add or remove more tables available for reservat
 
 ## Unfixed bugs
 
-* "Time" in reservation list page show as the number in Time_list in models.py instead of the timeslot. 
+* No known bugs
 
 <br></br>
 
@@ -214,3 +214,4 @@ This project was deployed using Heroku
 * Code Institute for training.
 * Various articles and youtubers for ideas. 
 * Bootstrap for making templates much easier.
+* Code Institute Slack and Tutoring assistance. 
