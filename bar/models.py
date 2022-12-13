@@ -6,6 +6,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.core import validators
 from django.forms import CharField
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 # from django.contrib.auth.models import User
 
 
@@ -52,7 +53,7 @@ class Reservation(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     phone = PhoneNumberField()
-    number_of_guests = models.IntegerField(default=3,)
+    number_of_guests = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)], default=1,)
     date = models.DateField(default=datetime.date.today,)
     time = models.IntegerField(choices=TIME_LIST, default=0)
     approved = models.BooleanField(default=True)
