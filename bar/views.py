@@ -35,6 +35,7 @@ def reserve_table(request):
                 form.user = request.user
                 form.save()
                 messages.success(request, 'Your reservation has been submitted successfully.')
+                return HttpResponseRedirect('reservation')
             else:
                 messages.error(request, 'Invalid form submission, correct the lines with error.')
 
