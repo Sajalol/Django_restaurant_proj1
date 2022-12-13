@@ -3,6 +3,7 @@ from django.forms import fields
 from .models import Reservation, Table
 from django.core import validators
 from django.forms import CharField
+import datetime
 
 class DateInput(forms.DateInput):
     input_type = 'date'
@@ -19,8 +20,8 @@ class ReserveTableForm(forms.ModelForm):
         widgets = {
             'date':DateInput(),
         }
-        def clean_date(self):
-            date = self.cleaned_data['date']
-            if date < datetime.date.today():
-                raise forms.ValidationError("The date cannot be in the past!")
-            return date
+    def clean_date(self):
+        date = self.cleaned_data['date']
+        if date < datetime.date.today():
+            raise forms.ValidationError("The date cannot be in the past!")
+        return date
