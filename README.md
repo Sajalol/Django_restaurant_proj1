@@ -204,6 +204,26 @@ The owner of the page can easly add or remove more tables available for reservat
 
 <br>
 
+# Wireframes from pre project
+
+## Homepage
+
+![Homepage](https://res.cloudinary.com/saja/image/upload/v1670965155/static/img/homepage_loghpn.png)
+
+## ReservationList
+
+![ReservationList](https://res.cloudinary.com/saja/image/upload/v1670965155/static/img/reservationlist_swgrwh.png)
+
+## MenuList
+
+![MenuList](https://res.cloudinary.com/saja/image/upload/v1670965155/static/img/menulist_eu0sit.png)
+
+## Admin Reservation List
+
+![AdminList](https://res.cloudinary.com/saja/image/upload/v1670965155/static/img/adminreservationlist_fgckoi.png)
+
+<br>
+
 # Deployment
 
 This project was deployed using Heroku
