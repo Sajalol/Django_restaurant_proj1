@@ -23,5 +23,5 @@ class ReserveTableForm(forms.ModelForm):
     def clean_date(self):
         date = self.cleaned_data['date']
         if date < datetime.date.today():
-            raise forms.ValidationError("The date cannot be in the past!")
+            raise forms.ValidationError("The date cannot be in the past")
         return date
