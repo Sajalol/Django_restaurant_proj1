@@ -148,7 +148,8 @@ The owner of the page can easly add or remove more tables available for reservat
     - No errors returned when passing through <a href="https://validator.w3.org/" target="_blank">HTML Validator</a>, except the django text.
 * CSS
     - No errors returned when passing through <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">CSS Validator</a>.
-
+* PythonChecker
+    - Used https://www.pythonchecker.com/ to check my python code, and all of the code had no serious issues. Code average above 80% in stats. Other pep8 testers seems to be out of function at time of testing.
 <br>
 
 
