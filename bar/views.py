@@ -78,3 +78,23 @@ def delete_view(request, reservation_id):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     reservation.delete()
     return redirect(reverse('list'))
+
+
+@login_required
+def edit_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    
+    if request.user != reservation.user and not request.user.is_staff:
+        raise PermissionDenied("403..You need to be the owner or staff to edit this reservation")
+
+    if request.method == 'POST':
+        form = ReserveTableForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your reservation has been updated successfully.')
+            return HttpResponseRedirect(reverse('list'))
+    else:
+        form = ReserveTableForm(instance=reservation)
+
+    context = {'form': form}
+    return render(request, 'edit_reservation.html', context)
