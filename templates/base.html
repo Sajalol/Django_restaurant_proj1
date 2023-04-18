@@ -45,6 +45,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'reservation' %}">Reservations</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'edit_reservation' request.user.id %}">Edit Reservation</a>
+          </li>
           <!------  Requires staff permissions to be viewable    -------->
           {% if request.user.is_staff %}
           <li class="nav-item">

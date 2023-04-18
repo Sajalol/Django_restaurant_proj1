@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Your Reservations</h2>
+
+  <div class="container">
+    <div class="row">
+      {% for reservation in reservations %}
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">{{ reservation.date }} at {{ reservation.time }}</h5>
+              <p class="card-text">Guests: {{ reservation.number_of_guests }}</p>
+              <p class="card-text">Phone: {{ reservation.phone }}</p>
+              <p class="card-text">Seats: {{ reservation.seats }}</p>
+              <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p>No reservations found.</p>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}
