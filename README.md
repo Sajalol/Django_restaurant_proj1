@@ -1,5 +1,75 @@
-# Indian Fantastic
-<br></br>
+# Restaurant Management Project
+
+# Table of Contents
+
+1. [Introduction](#introduction)
+2. [Technologies Used](#technologies-used)
+3. [Installation and Setup](#installation-and-setup)
+4. [Nav Bar](#nav-bar)
+5. [Footer](#footer)
+6. [Landing Page](#landing-page)
+7. [Menu Page](#menu-page)
+8. [Reservation Page](#reservation-page)
+9. [Reservation List Page](#reservation-list-page)
+10. [Reservation List Users](#reservation-list-users)
+11. [Edit Reservation](#edit-reservation)
+12. [Sign Up Page](#sign-up-page)
+13. [Admin Page Features](#admin-page-features)
+14. [Testing](#testing)
+15. [Wireframes from Pre-Project](#wireframes-from-pre-project)
+16. [Deployment](#deployment)
+17. [Agile Process](#agile-process)
+18. [Credits](#credits)
+
+
+## Introduction
+
+This is a restaurant management project created using the Django web framework. The project aims to provide an efficient solution for managing various restaurant operations, such as managing menus, booking tables, and handling customer information.
+
+
+## Technologies Used
+
+- Python
+- Django web framework
+- PostgreSQL for database management
+- Cloudinary for image and file storage
+- Bootstrap4 for responsive design
+- django-allauth for authentication
+- django-crispy-forms for better form rendering
+- django-summernote for rich text editing
+- django-phone-field and django-phonenumber-field for phone number handling
+- Gunicorn for deployment on Heroku
+
+## Installation and Setup
+
+To get this project up and running, follow these steps:
+
+1. Clone the repository:
+
+- https://github.com/Sajalol/Django_restaurant_proj1
+
+2. Install the required dependencies from `requirements.txt`:
+- pip install -r requirements.txt
+
+3. Create a new file called `env.py` in the project's root directory and add the following environment variables:
+- import os
+* os.environ['SECRET_KEY'] = 'your-secret-key'
+* os.environ['DATABASE_URL'] = 'your-database-url'
+* os.environ['CLOUDINARY_URL'] = 'your-cloudinary-url'
+Replace 'your-secret-key', 'your-database-url', and 'your-cloudinary-url' with the actual values for your project.
+
+4. Apply the database migrations:
+- python manage.py migrate
+
+4. Run the development server:
+- python manage.py runserver
+
+Now, you can access the application at `http://127.0.0.1:8000/`.
+
+Note: Remember not to include your `env.py` file in version control, as it contains sensitive information. Add it to your `.gitignore` file to ensure it's not tracked by Git.
+
+
+<br>
 
 ## Nav Bar
 
@@ -80,7 +150,24 @@ If you try to access the list_view link without staff permissions you get 403 er
 ![reservation_403](https://res.cloudinary.com/saja/image/upload/v1662633282/static/img/403_sjyrj4.png)
 
 
-<br></br>
+<br>
+
+
+## Reservation list Users 
+
+![reservation_user](https://res.cloudinary.com/saja/image/upload/v1681847564/Userlistreservation_he8zfq.png)
+
+List of all your active reservations for users. You are only able to edit / delete your own reservations
+
+<br>
+
+## Edit reservation
+
+![reservation_edit](https://res.cloudinary.com/saja/image/upload/v1681847727/edit_reservation_iuimcm.png)
+
+This is the reservation edit page you get sent to when you click "edit"
+
+<br>
 
 ## Sign Up Page
 
@@ -172,6 +259,23 @@ The owner of the page can easly add or remove more tables available for reservat
 
 <br>
 
+## Edit and Delete Buttons in Users List View
+- During the testing phase, I also focused on ensuring that the edit and delete buttons in the users list view functioned correctly and provided the desired user experience. Here's how I tested them:
+
+* Edit Button:
+1. Logged in as a user and navigated to the user's reservation list.
+2. Clicked on the 'Edit' button for a specific reservation and checked whether it redirected me to the reservation edit page.
+3. Updated the reservation details, such as date, time, or the number of guests, and submitted the form.
+4. Verified that the changes were saved and reflected in the user's reservation list and the admin panel.
+
+* Delete Button:
+1. Logged in as a user and navigated to the user's reservation list.
+2. Clicked on the 'Delete' button for a specific reservation and checked whether a confirmation pop-up appeared, asking to confirm the deletion.
+3. Confirmed the deletion and ensured that the reservation was removed from the user's reservation list.
+4. Verified that the deleted reservation was also removed from the admin panel's reservation list.
+
+Through these tests, I ensured that both the edit and delete buttons provided the desired functionality and user experience.
+
 ## Menu Form Testing
 
 * Variations of testing:
@@ -238,6 +342,67 @@ This project was deployed using Heroku
     - <a href="https://django-restaurant-1.herokuapp.com/" target="_blank">Heroku Link</a>
 
 <br>
+
+## Agile Process
+
+### 1. User Stories and Epics
+
+We maintain a list of user stories and epics in this README file. Each user story includes a clear description and acceptance criteria. User stories are grouped under their corresponding epics.
+
+### 2. Prioritization
+
+User stories are prioritized based on their importance and complexity. High-priority user stories are listed at the top of each epic section.
+
+### 3. Progress Tracking
+
+To track the progress of user stories, we use the following status labels:
+
+- [ ] To Do
+- [ ] In Progress
+- [ ] In Review
+- [ ] Done
+
+Update the status of a user story by checking or unchecking the corresponding checkbox.
+
+## User Stories and Epics
+
+### Epic 1: User Authentication
+
+#### User Story 1.1: As a user, I want to register for an account
+
+- [ ] Done
+- Acceptance Criteria:
+  - Users can provide their email, username, and password to create an account
+
+#### User Story 1.2: As a user, I want to log in to my account
+
+- [ ] Done
+- Acceptance Criteria:
+  - Users can log in using their email/username and password
+  - Users are redirected to the dashboard after successful login
+
+### Epic 2: Reservations
+
+#### User Story 2.1: As a user, I want to create a reservation
+
+- [ ] Done
+- Acceptance Criteria:
+  - Users can provide their phone number, date, time, and number of guests to make a reservation
+  - Users receive a confirmation message after creating a reservation
+
+#### User Story 2.2: As a user, I want to view my reservations
+- [ ] Done
+- Acceptance Criteria:
+    - Users can view a list of their reservations
+    - Users can Edit and delete their reservations
+
+
+#### User Story 2.3: As a Admin, I want to view and manage my reservations
+
+- [ ] Done
+- Acceptance Criteria:
+  - Admin can view a list of their reservations
+  - Admin can edit or delete their reservations
 
 # Credits
 

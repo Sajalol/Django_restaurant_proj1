@@ -74,12 +74,16 @@ def detail_view(request, reservation_id):
 # Delete View, needed to be able to delete in list_view
 
 def delete_view(request, reservation_id):
-
-
     reservation = get_object_or_404(Reservation, pk=reservation_id)
-    reservation.delete()
-    return redirect(reverse('list'))
 
+    if request.user != reservation.user and not request.user.is_staff:
+        raise PermissionDenied("403..You need to be the owner or staff to delete this reservation")
+
+    reservation.delete()
+    return redirect(reverse('home'))
+
+
+# Edit view
 
 @login_required
 def edit_reservation(request, reservation_id):
@@ -93,9 +97,17 @@ def edit_reservation(request, reservation_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your reservation has been updated successfully.')
-            return HttpResponseRedirect(reverse('list'))
+            return HttpResponseRedirect(reverse('home'))
     else:
         form = ReserveTableForm(instance=reservation)
 
     context = {'form': form}
     return render(request, 'edit_reservation.html', context)
+
+# user viewlist
+
+@login_required
+def user_reservations(request):
+    user_reservations = Reservation.objects.filter(user=request.user)
+    context = {'reservations': user_reservations}
+    return render(request, 'user_reservations.html', context)
