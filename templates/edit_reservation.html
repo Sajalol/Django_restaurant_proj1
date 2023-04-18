@@ -2,12 +2,50 @@
 {% load bootstrap4 %}
 
 {% block content %}
-<div class="container py-5">
-    <h1 class="display-4">Edit Reservation</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-signup">Update Reservation</button>
-    </form>
+<div style="background: url(https://res.cloudinary.com/saja/image/upload/v1661762460/static/img/background3.3791b41887af.jpg)"
+    class="jumbotron page-holder bg-cover">
+
+    <div class="container py-5">
+        <h1 class="display-4 text-center">Edit Reservation</h1>
+        <div class="row py-5">
+            <div class="col-lg-7 mx-auto">
+                <div class="card shadow mb-4">
+                    <div class="card-body p-5 bg-dark text-white" style="border: 2px solid #a5a0a0;">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                {% for field in form %}
+                                    <label for="{{ field.auto_id }}" class="text-white">{{ field.label }}</label>
+                                    {% if field.name == "time" %}
+                                        <select name="{{ field.html_name }}" id="{{ field.auto_id }}" class="form-control {% if field.errors %}is-invalid{% endif %}">
+                                            {% for value, display_name in field.field.choices %}
+                                                <option value="{{ value }}" {% if field.value|default:'' == value|stringformat:"s" %}selected{% endif %}>{{ display_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% elif field.name == "seats" %}
+                                        <select name="{{ field.html_name }}" id="{{ field.auto_id }}" class="form-control {% if field.errors %}is-invalid{% endif %}">
+                                            {% for option in field.field.queryset %}
+                                                <option value="{{ option.pk }}" {% if field.value|default:'' == option.pk|stringformat:"s" %}selected{% endif %}>{{ option }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% else %}
+                                        <input type="{{ field.field.widget.input_type }}"
+                                               name="{{ field.html_name }}"
+                                               id="{{ field.auto_id }}"
+                                               value="{{ field.value|default:'' }}"
+                                               class="form-control {% if field.errors %}is-invalid{% endif %}">
+                                    {% endif %}
+                                    {% for error in field.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                            <button type="submit" class="btn btn-signup">Update Reservation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

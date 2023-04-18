@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import ReserveTableForm
 from django.views.generic.edit import DeleteView
 from django.core.exceptions import PermissionDenied
+from django.contrib import messages
 
 class RestaurantList(generic.ListView):
     model = Restaurant

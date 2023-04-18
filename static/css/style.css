@@ -240,3 +240,16 @@ i:active {
     display: block;
     margin-right: 1rem;
 }
+
+/* Message */ 
+
+.custom-message {
+    background-color: #28a745;
+    color: white; 
+    border-radius: 5px; 
+    padding: 10px; 
+    font-weight: bold; 
+    text-align: center; 
+    width: 50%;
+    margin: 0 auto 20px auto; 
+}
