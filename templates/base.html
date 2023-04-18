@@ -43,10 +43,10 @@
             <a class="nav-link active" aria-current="page" href="{% url 'menu' %}">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'reservation' %}">Reservations</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'reservation' %}">Create Reservations</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'edit_reservation' request.user.id %}">Edit Reservation</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'edit_reservation' request.user.id %}">Your Reservation</a>
           </li>
           <!------  Requires staff permissions to be viewable    -------->
           {% if request.user.is_staff %}
