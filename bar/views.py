@@ -8,9 +8,6 @@ from django.contrib.auth.decorators import login_required
 from .forms import ReserveTableForm
 from django.views.generic.edit import DeleteView
 from django.core.exceptions import PermissionDenied
-from django.views.generic.edit import UpdateView
-from django.shortcuts import render
-from .models import Reservation
 
 class RestaurantList(generic.ListView):
     model = Restaurant
@@ -81,14 +78,3 @@ def delete_view(request, reservation_id):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     reservation.delete()
     return redirect(reverse('list'))
-
-
-# Update View, needed to be able to edit
-
-def edit_reservation(request, user_id):
-    if request.user.is_authenticated and request.user.id == user_id:
-        reservations = Reservation.objects.filter(user=request.user)
-        context = {'reservations': reservations}
-        return render(request, 'edit_reservation.html', context)
-    else:
-        return redirect('account_login')
