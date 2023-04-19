@@ -1,6 +1,7 @@
 # Restaurant Management Project
 
 # Table of Contents
+<br>
 
 1. [Introduction](#introduction)
 2. [Technologies Used](#technologies-used)
@@ -26,6 +27,7 @@
 
 This is a restaurant management project created using the Django web framework. The project aims to provide an efficient solution for managing various restaurant operations, such as managing menus, booking tables, and handling customer information.
 
+<br>
 
 ## Technologies Used
 
@@ -39,6 +41,8 @@ This is a restaurant management project created using the Django web framework. 
 - django-summernote for rich text editing
 - django-phone-field and django-phonenumber-field for phone number handling
 - Gunicorn for deployment on Heroku
+
+<br>
 
 ## Installation and Setup
 
@@ -77,7 +81,7 @@ The navbar is easy to navigate, and features all three pages and the sign up, si
 
 ![nav_bar](https://res.cloudinary.com/saja/image/upload/v1662210575/static/img/nav_bar_pn4zur.png)
 
-<br></br>
+<br>
 
 ## Footer
 
@@ -89,7 +93,7 @@ The navbar is easy to navigate, and features all three pages and the sign up, si
 
     - ![footer](https://res.cloudinary.com/saja/image/upload/v1662212651/static/img/footer_vyugok.png)
 
-<br></br>
+<br>
 
 ## Landing Page
 
@@ -97,7 +101,7 @@ The landing page for the restaurant will show you some welcoming text, opening h
 
 ![Welcome_text](https://res.cloudinary.com/saja/image/upload/v1662208140/static/img/welcome_ruybsa.png)
 
-<br></br>
+<br>
 
 ## Menu page
 
@@ -106,7 +110,7 @@ The menu page has a list of the restaurants special dishes.
 ![Menu](https://res.cloudinary.com/saja/image/upload/v1662208334/static/img/menu.page_zb7abp.png)
 
 
-<br></br>
+<br>
 
 ## Reservation Page
 
@@ -127,7 +131,7 @@ If you try to reserve a table thats already reserved on that date and time you g
 ![reservation_error](https://res.cloudinary.com/saja/image/upload/v1662209891/static/img/reservation_form_error_ap1ydy.png)
 
 
-<br></br>
+<br>
 
 ## Reservation List Page
 
@@ -221,8 +225,6 @@ The owner of the page can easly add or remove more tables available for reservat
     - In the "Tables" section, click the selected table you would like to delete and choose "Delete selected tables" and click "Go". 
     - ![deleting_seats](https://res.cloudinary.com/saja/image/upload/v1662212227/static/img/delete_seats_ghoepq.png)
 
-
-
 <br>
 
 # Testing
@@ -315,13 +317,19 @@ Through these tests, I ensured that both the edit and delete buttons provided th
 
 ![Homepage](https://res.cloudinary.com/saja/image/upload/v1670965155/static/img/homepage_loghpn.png)
 
+<br>
+
 ## ReservationList
 
 ![ReservationList](https://res.cloudinary.com/saja/image/upload/v1670965155/static/img/reservationlist_swgrwh.png)
 
+<br>
+
 ## MenuList
 
 ![MenuList](https://res.cloudinary.com/saja/image/upload/v1670965155/static/img/menulist_eu0sit.png)
+
+<br>
 
 ## Admin Reservation List
 
@@ -331,15 +339,24 @@ Through these tests, I ensured that both the edit and delete buttons provided th
 
 # Deployment
 
-This project was deployed using Heroku
+This project is deployed using Heroku for the Django.
 
-* Steps for deployment:
-    - Create a new Heroku App
-    - Create database in heroku, using postgres
-    - Link the heroku app to the repository
-    - Add the needed info in config vars
-    - Click Deploy
-    - <a href="https://django-restaurant-1.herokuapp.com/" target="_blank">Heroku Link</a>
+1. Create a new Heroku app.
+2. Install the required Heroku add-ons, such as the PostgreSQL or another database.
+3. Set the environment variables for the deployment, such as the `SECRET_KEY`, `DATABASE_URL`,`CLOUDINARY_URL` and any other necessary variables.
+4. Update the `ALLOWED_HOSTS` setting in your Django project to include the Heroku app's domain.
+5. Commit your changes and push the project to your GitHub repository.
+6. Connect your Heroku app to your GitHub repository and enable automatic deploys.
+7. Deploy your app by triggering a manual deploy or pushing new changes to your GitHub repository.
+
+## Additional Deployment Notes
+
+- Make sure to set the environment variables for the backend deployment, such as the `SECRET_KEY`, `DATABASE_URL`, and any other necessary variables.
+- Remember to run `collectstatic` for the Django app to serve static files in production.
+
+## My deployed heroku link:
+
+- <a href="https://django-restaurant-1.herokuapp.com/" target="_blank">Heroku Link</a>
 
 <br>
 
@@ -403,6 +420,23 @@ Update the status of a user story by checking or unchecking the corresponding ch
 - Acceptance Criteria:
   - Admin can view a list of their reservations
   - Admin can edit or delete their reservations
+
+#### User Story 2.4: As a user, I want to edit my reservations
+
+- [ ] Done
+- Acceptance Criteria:
+  - Users can access the edit_reservation page for their reservations
+  - Users can update the date, time, and number of guests for their reservations
+  - Users receive a confirmation message after updating their reservations
+
+#### User Story 2.5: As a user, I want to view a list of all my reservations
+
+- [ ] Done
+- Acceptance Criteria:
+  - Users can access the user_reservations page to view all their reservations
+  - The user_reservations page displays reservation details including date, time, and number of guests
+
+<br>
 
 # Credits
 
