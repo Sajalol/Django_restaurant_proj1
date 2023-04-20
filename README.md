@@ -353,6 +353,9 @@ This project is deployed using Heroku for the Django.
 
 - Make sure to set the environment variables for the deployment, such as the `SECRET_KEY`, `DATABASE_URL`, and any other necessary variables.
 - Remember to run `collectstatic`or any other way to serve static files for the Django app to serve static files in production.
+- Add `Port` `8000` to Config vars
+- Add `DISABLE_COLLECTSTATIC` `1` to config vars
+- Remember to set `DEBUG = FALSE` in settings during deployment
 
 ## My deployed heroku link:
 
