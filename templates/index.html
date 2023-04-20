@@ -10,13 +10,9 @@
     <!-------  introduction  ---->
     <div class="container-fluid">
         <div class="d-flex flex-column justify-content-center align-items-center hero">
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }} custom-message mb-3" role="alert">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endif %}
+            <div class="alert alert-{{ message.tags }} custom-message mb-3" role="alert" style="position: absolute; top: 130px; left: 50%; transform: translateX(-50%); width: auto; max-width: 90%;">
+            {% include 'messages.html' %}
+        </div>
             <h1 class="display-6 bolder mt-2">Hello and welcome to Indian Fantastic! The best Indian food you can get!
             </h1>
             <h4 class="display-7 bolder mt-2">Please feel free to take a look at our menu's page or book a table</h4>
