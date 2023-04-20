@@ -60,7 +60,7 @@ To get this project up and running, follow these steps:
 * os.environ['SECRET_KEY'] = 'your-secret-key'
 * os.environ['DATABASE_URL'] = 'your-database-url'
 * os.environ['CLOUDINARY_URL'] = 'your-cloudinary-url'
-Replace 'your-secret-key', 'your-database-url', and 'your-cloudinary-url' with the actual values for your project.
+* Replace 'your-secret-key', 'your-database-url', and 'your-cloudinary-url' with the actual values for your project.
 
 4. Apply the database migrations:
 - python manage.py migrate
@@ -351,8 +351,8 @@ This project is deployed using Heroku for the Django.
 
 ## Additional Deployment Notes
 
-- Make sure to set the environment variables for the backend deployment, such as the `SECRET_KEY`, `DATABASE_URL`, and any other necessary variables.
-- Remember to run `collectstatic` for the Django app to serve static files in production.
+- Make sure to set the environment variables for the deployment, such as the `SECRET_KEY`, `DATABASE_URL`, and any other necessary variables.
+- Remember to run `collectstatic`or any other way to serve static files for the Django app to serve static files in production.
 
 ## My deployed heroku link:
 
@@ -361,16 +361,20 @@ This project is deployed using Heroku for the Django.
 <br>
 
 ## Agile Process
+<br>
 
 ### 1. User Stories and Epics
 
 We maintain a list of user stories and epics in this README file. Each user story includes a clear description and acceptance criteria. User stories are grouped under their corresponding epics.
+<br>
 
 ### 2. Prioritization
 
 User stories are prioritized based on their importance and complexity. High-priority user stories are listed at the top of each epic section.
+<br>
 
 ### 3. Progress Tracking
+<br>
 
 To track the progress of user stories, we use the following status labels:
 
@@ -380,16 +384,21 @@ To track the progress of user stories, we use the following status labels:
 - [ ] Done
 
 Update the status of a user story by checking or unchecking the corresponding checkbox.
+<br>
 
 ## User Stories and Epics
+<br>
 
 ### Epic 1: User Authentication
+<br>
 
 #### User Story 1.1: As a user, I want to register for an account
+<br>
 
 - [ ] Done
 - Acceptance Criteria:
   - Users can provide their email, username, and password to create an account
+  <br>
 
 #### User Story 1.2: As a user, I want to log in to my account
 
@@ -397,8 +406,10 @@ Update the status of a user story by checking or unchecking the corresponding ch
 - Acceptance Criteria:
   - Users can log in using their email/username and password
   - Users are redirected to the dashboard after successful login
+  <br>
 
 ### Epic 2: Reservations
+<br>
 
 #### User Story 2.1: As a user, I want to create a reservation
 
@@ -406,12 +417,14 @@ Update the status of a user story by checking or unchecking the corresponding ch
 - Acceptance Criteria:
   - Users can provide their phone number, date, time, and number of guests to make a reservation
   - Users receive a confirmation message after creating a reservation
+  <br>
 
 #### User Story 2.2: As a user, I want to view my reservations
 - [ ] Done
 - Acceptance Criteria:
     - Users can view a list of their reservations
     - Users can Edit and delete their reservations
+    <br>
 
 
 #### User Story 2.3: As a Admin, I want to view and manage my reservations
@@ -420,6 +433,7 @@ Update the status of a user story by checking or unchecking the corresponding ch
 - Acceptance Criteria:
   - Admin can view a list of their reservations
   - Admin can edit or delete their reservations
+  <br>
 
 #### User Story 2.4: As a user, I want to edit my reservations
 
@@ -428,6 +442,7 @@ Update the status of a user story by checking or unchecking the corresponding ch
   - Users can access the edit_reservation page for their reservations
   - Users can update the date, time, and number of guests for their reservations
   - Users receive a confirmation message after updating their reservations
+<br>
 
 #### User Story 2.5: As a user, I want to view a list of all my reservations
 
