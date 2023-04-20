@@ -80,6 +80,7 @@ def delete_view(request, reservation_id):
         raise PermissionDenied("403..You need to be the owner or staff to delete this reservation")
 
     reservation.delete()
+    messages.success(request, 'The reservation has been deleted successfully.')  # Add this line
     return redirect(reverse('home'))
 
 
