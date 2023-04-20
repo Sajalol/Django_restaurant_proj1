@@ -97,7 +97,9 @@ The navbar is easy to navigate, and features all three pages and the sign up, si
 
 ## Landing Page
 
-The landing page for the restaurant will show you some welcoming text, opening hours and easy navigation to the menu with special dishes and the reservation page. 
+- The landing page for the restaurant will show you some welcoming text, opening hours and easy navigation to the menu with special dishes and the reservation page. 
+- When you have done an edit to your reservation, you will be redirected to the landing page with a success message
+- When you have deleted one of reservations, you will be redirected to the landing page with a success message
 
 ![Welcome_text](https://res.cloudinary.com/saja/image/upload/v1662208140/static/img/welcome_ruybsa.png)
 
