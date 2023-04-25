@@ -432,12 +432,13 @@ Update the status of a user story by checking or unchecking the corresponding ch
     <br>
 
 
-#### User Story 2.3: As a Admin, I want to view and manage my reservations
+#### User Story 2.3: As a Admin, I want to view and manage my reservations. And edit menu
 
 - [ ] Done
 - Acceptance Criteria:
   - Admin can view a list of their reservations
   - Admin can edit or delete their reservations
+  - Admin can edit menu
   <br>
 
 #### User Story 2.4: As a user, I want to edit my reservations
@@ -449,14 +450,6 @@ Update the status of a user story by checking or unchecking the corresponding ch
   - Users receive a confirmation message after updating their reservations
 <br>
 
-#### User Story 2.5: As a user, I want to view a list of all my reservations
-
-- [ ] Done
-- Acceptance Criteria:
-  - Users can access the user_reservations page to view all their reservations
-  - The user_reservations page displays reservation details including date, time, and number of guests
-
-<br>
 
 # Credits
 
